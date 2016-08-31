@@ -1,0 +1,24 @@
+{
+    "name": "physics-js",
+    "authors": [
+        "Ria Chu <chuyue10@gmail.com>"
+    ],
+    "description": "2D physics engine in Javascript.",
+    "main": "",
+    "dependencies": {
+        "vector-js": "chuyue10/vector-js"
+    },
+    "devDependencies": {
+        "jasmine": "2.4.1"
+    },
+    "license": "GNU",
+    "homepage": "",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}
