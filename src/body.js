@@ -27,3 +27,30 @@ function Body() {
 
     return this;
 }
+
+Body.prototype = {
+
+    /**
+     * Adds a shape to the body.
+     * @param {Circle, Rectangle} shape aditional component to the body
+     */
+    addShape: function(shape) {
+        this.shapes.push(shape);
+        return this;
+    },
+
+    /**
+     * Draw the shape on the context.
+     * @param  {context} context the graphics context of a canvas
+     * @return {void} no return
+     */
+    draw: function(context) {
+        for (shape of this.shapes) {
+            shape.draw(
+                this.position.add(shape.offset),
+                this.angle,
+                context 
+            )
+        }
+    }
+}

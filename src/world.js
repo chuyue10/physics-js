@@ -7,6 +7,7 @@
  */
 function World() {
     this.bodies = [];
+    return this;
 }
 
 World.prototype = {
@@ -16,5 +17,14 @@ World.prototype = {
      */
     addBody: function(body) {
         this.bodies.push(body);
+        return this;
+    },
+
+    /**
+     * Moves the world forward in time.
+     * @return {void} no return.
+     */
+    step: function() {
+
     }
 };
