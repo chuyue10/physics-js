@@ -49,7 +49,7 @@ Body.prototype = {
             shape.draw(
                 this.position.add(shape.offset),
                 this.angle,
-                context 
+                context
             )
         }
     }

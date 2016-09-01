@@ -1,6 +1,4 @@
 /**
- *
- *
  * Start the simulation when the window loads.
  */
 window.onload = function() {
@@ -13,5 +11,8 @@ window.onload = function() {
         )
     );
     world.addBody(circle);
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    circle.draw(context);
     console.log(world);
 }
