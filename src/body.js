@@ -31,6 +31,15 @@ function Body() {
 Body.prototype = {
 
     /**
+     * Set a new position for this body.
+     * @param {Vector} position the new position vector for this body
+     */
+    setPosition: function(position) {
+        this.position = position;
+        return this;
+    },
+
+    /**
      * Adds a shape to the body.
      * @param {Circle, Rectangle} shape aditional component to the body
      */
