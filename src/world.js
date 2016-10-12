@@ -22,9 +22,26 @@ World.prototype = {
 
     /**
      * Moves the world forward in time.
-     * @return {void} no return.
+     * @param  {Number} timestep the time delta between this and the previous   step
+     * @return {void}            no return
      */
-    step: function() {
+    step: function(timestep) {
 
+        // update location
+        this.updatePositions();
+
+        // collision resolution
+
+    },
+
+    /**
+     * Updates the position of all bodies in the world.
+     * @param  {Number} timestep the time delta between this and the previous step
+     * @return {void}            no return
+     */
+    updatePositions: function(timestep) {
+        for (var i = 0; i < this.bodies.length; i++) {
+            console.log(this.bodies[i]);
+        }
     }
 };

@@ -24,10 +24,16 @@ window.onload = function() {
 }
 
 function step(timestamp) {
-    console.log(timestamp);
+
+    // step the world
+    world.step();
+
+    // create canvas and redraw
     context.clearRect(0, 0, 1440, 900);
-    circle.setPosition(circle.position.setX(circle.position.x + 1));
-    // console.log(circle.position);
-    circle.draw(context)
+    for (var i = 0; i < world.bodies.length; i++) {
+        world.bodies[i].draw(context)
+    }
+
+    // request next frame
     window.requestAnimationFrame(step);
 }
